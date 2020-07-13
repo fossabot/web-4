@@ -6,13 +6,33 @@
     "./"
   ],
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-storyshots": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.19",
+    "@types/jest": "^26.0.4",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/styled-components": "^4.1.4",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
     "react": "^16.7.0",
+    "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.7.0",
-    "styled-components": "^4.1.3",
-    "typescript": "^3.2.2"
+    "tailwindcss": "^1.4.6",
+    "ts-jest": "^26.1.1",
+    "ts-loader": "^8.0.0",
+    "typescript": "^3.9.6"
+  },
+  "scripts": {
+    "build:css": "tailwind build src/css/tailwind.src.css -c tailwind.config.js -o src/tailwind.css",
+    "storybook": "yarn build:css && start-storybook -p 6006",
+    "build:storybook": "build-storybook"
   }
 }
