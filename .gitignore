@@ -40,3 +40,6 @@ Thumbs.db
 
 # Tailwindcss
 /css/tailwind.css
+
+# Nextjs
+.next/

@@ -5,5 +5,6 @@
   "modifyObstructiveCode": false,
   "pluginsFile": "./src/plugins/index",
   "supportFile": "./src/support/index.ts",
+  "video": false,
   "chromeWebSecurity": false
 }

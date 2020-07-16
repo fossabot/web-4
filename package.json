@@ -7,7 +7,7 @@
     "start": "yarn build:css && nx serve",
     "build": "NODE_ENV=production yarn build:css && nx build",
     "test": "nx test",
-    "lint": "nx workspace-lint && nx lint",
+    "fmt": "nx workspace-lint && nx lint && nx format:write",
     "e2e": "nx e2e",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
@@ -17,7 +17,6 @@
     "affected:lint": "nx affected:lint",
     "affected:dep-graph": "nx affected:dep-graph",
     "affected": "nx affected",
-    "fmt": "nx format:write",
     "update": "nx migrate latest",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
@@ -66,6 +65,7 @@
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.4",
+    "husky": "^4.2.5",
     "jest": "25.2.3",
     "prettier": "2.0.4",
     "tailwindcss": "^1.5.1",
@@ -73,5 +73,10 @@
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
     "typescript": "~3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn fmt && yarn test && yarn e2e research-e2e --headless"
+    }
   }
 }

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 
 export const Index = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   const linkStyle =
-    "text-gray-700 font-medium hover:text-black transition duration-150 ease-in-out text-lg"
-
-
+    'text-gray-700 font-medium hover:text-black transition duration-150 ease-in-out text-lg';
 
   return (
     <div className="h-screen bg-gray-100">
@@ -25,27 +23,68 @@ export const Index = () => {
                 </a>
 
                 <div className="md:hidden">
-                  <button onClick={toggleMenu} className="p-2 text-gray-400 hover:text-gray-900 focus:outline-none">
-                    <svg className="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <button
+                    onClick={toggleMenu}
+                    className="p-2 text-gray-400 hover:text-gray-900 focus:outline-none"
+                  >
+                    <svg
+                      className="w-6 h-6"
+                      stroke="currentColor"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
                       {open ? (
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
                       ) : (
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                        )}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
+                      )}
                     </svg>
                   </button>
                 </div>
-                <div className={`${open ? "" : "hidden"} w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}>
-
+                <div
+                  className={`${
+                    open ? '' : 'hidden'
+                  } w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}
+                >
                   <ul className="flex flex-col pt-4 mt-4 -mx-4 space-y-4 border-t md:space-x-2 md:space-y-0 md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0 md:space-x-16">
-                    <li><a className={linkStyle + " font-medium"} href="#">Product</a></li>
-                    <li><a className={linkStyle} href="#">Features</a></li>
-                    <li><a className={linkStyle} href="#">About us</a></li>
+                    <li>
+                      <a className={linkStyle + ' font-medium'} href="#">
+                        Product
+                      </a>
+                    </li>
+                    <li>
+                      <a className={linkStyle} href="#">
+                        Features
+                      </a>
+                    </li>
+                    <li>
+                      <a className={linkStyle} href="#">
+                        About us
+                      </a>
+                    </li>
                   </ul>
                 </div>
-                <div className={`${open ? "" : "hidden"} w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}>
+                <div
+                  className={`${
+                    open ? '' : 'hidden'
+                  } w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}
+                >
                   <ul className="flex flex-col pt-4 mt-4 -mx-4 space-y-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0 md:space-y-0 md:space-x-4">
-                    <li><a className={linkStyle} href="trade">Documentation</a></li>
+                    <li>
+                      <a className={linkStyle} href="trade">
+                        Documentation
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -56,31 +95,38 @@ export const Index = () => {
                 <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 md:text-center xl:text-5xl sm:leading-none md:text-6xl">
                   <span className="text-primary-600">Factor returns </span>
                   <br className="xl:hidden"></br>
-                 to enrich your reasearch
+                  to enrich your research
                 </h2>
                 <p className="mt-3 text-gray-500 md:text-center sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
+                  occaecat fugiat aliqua.
                 </p>
                 <div className="flex flex-col items-center justify-center mt-5 space-y-8 sm:flex-row sm:space-y-0 sm:space-x-4">
                   <div className="rounded-md shadow">
-                    <a href="#" className="w-full px-8 py-3 font-medium leading-6 text-white transition duration-150 ease-in-out border rounded-md bg-primary-600 order-transparent hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary md:py-4 md:text-lg md:px-10">
+                    <a
+                      href="#"
+                      className="w-full px-8 py-3 font-medium leading-6 text-white transition duration-150 ease-in-out border rounded-md bg-primary-600 order-transparent hover:bg-primary-500 focus:outline-none focus:border-primary-700 focus:shadow-outline-primary md:py-4 md:text-lg md:px-10"
+                    >
                       Get started
-                </a>
+                    </a>
                   </div>
                   <div className="">
-                    <a href="#" className="w-full px-8 py-3 font-medium leading-6 duration-150 ease-in-out border rounded-md text-primary-700 bg-primary-100 transitio border-transparnt hover:text-primary-600 hover:bg-primary-50 focus:outline-none focus:shadow-outline-primary focus:border-primary-300 md:py-4 md:text-lg md:px-10">
+                    <a
+                      href="#"
+                      className="w-full px-8 py-3 font-medium leading-6 duration-150 ease-in-out border rounded-md text-primary-700 bg-primary-100 transitio border-transparnt hover:text-primary-600 hover:bg-primary-50 focus:outline-none focus:shadow-outline-primary focus:border-primary-300 md:py-4 md:text-lg md:px-10"
+                    >
                       Do something
-                </a>
+                    </a>
                   </div>
                 </div>
               </div>
             </main>
           </div>
         </div>
-
       </div>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
 export default Index;
