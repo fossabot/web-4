@@ -1851,7 +1851,7 @@
     node-gyp "^6.1.0"
     read-package-json-fast "^1.1.3"
 
-"@nrwl/cli@9.5.1":
+"@nrwl/cli@9.5.1", "@nrwl/cli@^9.5.1":
   version "9.5.1"
   resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-9.5.1.tgz#c2ae2c21c7c439a91ec1f593f1ce944a0d310dd9"
   integrity sha512-HldjuqLgeBZL6a0IheAiiIusZAvBrt61Fi+3lJh5lMm7GyDZ1D76ScQaMsPZ4+ezg/mHs+opxJ1GCLbSujzu/w==
