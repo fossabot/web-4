@@ -76,7 +76,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn fmt && yarn test && yarn e2e research-e2e --headless"
+      "pre-commit": "yarn fmt && yarn test && yarn e2e --headless"
     }
   }
 }
