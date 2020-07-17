@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         node: [ '14', '12' ]
-    name: test/node ${{ matrix.node }}
+    name: Unit test node@${{ matrix.node }}
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
@@ -18,10 +18,23 @@ jobs:
      - name: Install dependencies
        run: yarn install
      - run: yarn test:all
+  e2e:
+    strategy:
+    name: e2e test
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - name: Setup node
+       uses: actions/setup-node@v1
+       with:
+          node-version: '14'
+     - name: Install dependencies
+       run: yarn install
+     - run: yarn e2e --headless
 
   coverage:
     needs: [ test ]
-    name: coverage
+    name: Coverage
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
