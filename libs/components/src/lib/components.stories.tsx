@@ -1,9 +1,9 @@
-import React from 'react';
-import { Components, ComponentsProps } from './components';
+import React from "react";
+import { Components, ComponentsProps } from "./components";
 
 export default {
   component: Components,
-  title: 'Components',
+  title: "Components",
 };
 
 export const primary = () => {
