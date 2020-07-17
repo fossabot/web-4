@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { NavbarLink } from "@perfolio/components"
-
+import React, { useState } from "react";
+import { NavbarLink } from "@perfolio/components";
 
 export const Index = () => {
   const [open, setOpen] = useState(false);
@@ -10,7 +9,7 @@ export const Index = () => {
   };
 
   const linkStyle =
-    'text-gray-700 font-medium hover:text-black transition duration-150 ease-in-out text-lg';
+    "text-gray-700 font-medium hover:text-black transition duration-150 ease-in-out text-lg";
 
   return (
     <div className="h-screen bg-gray-100">
@@ -43,32 +42,31 @@ export const Index = () => {
                           d="M6 18L18 6M6 6l12 12"
                         />
                       ) : (
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                          />
-                        )}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
+                      )}
                     </svg>
                   </button>
                 </div>
                 <div
                   className={`${
-                    open ? '' : 'hidden'
-                    } w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}
+                    open ? "" : "hidden"
+                  } w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}
                 >
                   <ul className="flex flex-col pt-4 mt-4 -mx-4 space-y-4 border-t md:space-x-2 md:space-y-0 md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0 md:space-x-16">
                     <NavbarLink label="Product"></NavbarLink>
                     <NavbarLink label="Features"></NavbarLink>
                     <NavbarLink label="About us"></NavbarLink>
-
                   </ul>
                 </div>
                 <div
                   className={`${
-                    open ? '' : 'hidden'
-                    } w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}
+                    open ? "" : "hidden"
+                  } w-full md:w-auto md:flex md:items-center justify-between ml-4 md:ml-0`}
                 >
                   <ul className="flex flex-col pt-4 mt-4 -mx-4 space-y-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0 md:space-y-0 md:space-x-4">
                     <li>
