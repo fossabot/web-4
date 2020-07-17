@@ -1,11 +1,11 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Components from "./components";
+import Navbar from "./navbar";
 
-describe(" Components", () => {
+describe(" Navbar", () => {
   it("should render successfully", () => {
-    const { baseElement } = render(<Components />);
+    const { baseElement } = render(<Navbar />);
     expect(baseElement).toBeTruthy();
   });
 });
