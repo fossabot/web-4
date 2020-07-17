@@ -1,6 +1,6 @@
 <div align="center">
     <h1 style="padding-bottom:20px;">
-        <span style="color: #1A202C;">PERFOLIO</span><span style="color: #0051FF;">RESEARCH</span>
+        <span style="color: #1A202C;">PERFOLIO</span><span style="color:blue;">RESEARCH</span>
     </h1>
     <a 
         href="https://github.com/chronark/swapchain/blob/master/LICENSE">
