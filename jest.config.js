@@ -1,12 +1,18 @@
 module.exports = {
-  testMatch: ['**/+(*.)+test.+ts?(x)'],
+  testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)', '!**/integration/*'],
   transform: {
     '^.+\\.(ts|js|html)$': 'ts-jest',
   },
   resolver: '@nrwl/jest/plugins/resolver',
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageReporters: ['html'],
-  collectCoverageFrom: ['apps/**/*.{ts,tsx}', 'libs/**/*.{ts,tsx}', '!*.d.ts'],
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov'],
+  collectCoverageFrom: [
+    'apps/research/**/*.{ts,tsx}',
+    'libs/components/**/*.{ts,tsx}',
+    '!**/*.d.ts',
+    '!**/index.ts',
+  ],
   coverageThreshold: {
     global: {
       lines: 80,
