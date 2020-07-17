@@ -1,0 +1,39 @@
+name: test
+on:
+  push:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        node: [ '14', '12' ]
+    name: test/node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - name: Setup node
+       uses: actions/setup-node@v1
+       with:
+          node-version: '${{ matrix.node }}'
+     - name: Install dependencies
+       run: yarn install
+     - run: yarn test:all
+
+  coverage:
+    needs: [ test ]
+    name: coverage
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - name: Setup node
+       uses: actions/setup-node@v1
+       with:
+         node-version: '14'
+     - name: Install dependencies
+       run: yarn install
+     - name: Code Climate Coverage
+       uses: paambaati/codeclimate-action@v2.6.0
+       env:
+        CC_TEST_REPORTER_ID: bebce54c74e6d44aef0dad29be020ea43508be5725ac773e59f5a7ec5e9d3f81
+       with:
+        coverageCommand: yarn test:all
