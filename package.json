@@ -79,14 +79,11 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && yarn test && yarn build",
-      "pre-push": "yarn test:all && yarn e2e --headless"
+      "pre-push": "yarn test:all"
     }
   },
   "lint-staged": {
-    "**/*.{json,md,yml}": [
-      "yarn fmt"
-    ],
-    "**/*.{ts,tsx,js}": [
+    "*": [
       "yarn fmt"
     ]
   }
