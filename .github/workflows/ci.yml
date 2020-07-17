@@ -19,7 +19,6 @@ jobs:
        run: yarn install
      - run: yarn test:all
   e2e:
-    strategy:
     name: e2e test
     runs-on: ubuntu-latest
     steps:
