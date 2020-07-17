@@ -9,7 +9,7 @@
     "test": "nx run-many --target=test --all",
     "test:all": "yarn jest",
     "fmt": "nx workspace-lint && nx lint && nx format:write",
-    "e2e": "nx run-many --target=e2e --all",
+    "e2e": "yarn build:css && nx run-many --target=e2e --all",
     "affected:apps": "nx affected:apps",
     "affected:libs": "nx affected:libs",
     "affected:build": "nx affected:build",
