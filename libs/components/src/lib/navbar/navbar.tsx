@@ -58,7 +58,7 @@ export const Navbar = (props: NavbarProps) => {
           <ul className="flex flex-col pt-4 mt-4 -mx-4 space-y-4 md:space-x-2 md:space-y-0 md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:space-x-16">
             <NavbarLink label="Product"></NavbarLink>
             <NavbarLink label="Features"></NavbarLink>
-            <NavbarLink label="About us"></NavbarLink>
+            <NavbarLink label="About us" href="/about"></NavbarLink>
             <div className="border-t border-gray-300 md:border-0"></div>
             <NavbarLink label="Documentation"></NavbarLink>
           </ul>
