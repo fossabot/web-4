@@ -78,7 +78,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test && yarn e2e --headless"
+      "pre-commit": "lint-staged && yarn test && yarn build",
+      "pre-push": "yarn test:all && yarn e2e --headless"
     }
   },
   "lint-staged": {
