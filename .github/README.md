@@ -2,6 +2,9 @@
     <h1 style="padding-bottom:20px; color: red;">
         <span style="color: #1A202C;">PERFOLIO</span><span>RESEARCH</span>
     </h1>
+        <p style='color:red'>This is some red text.</p>
+    <font color="red">This is some text!</font>
+    These are <b style='color:red'>red words</b>.
     <a 
         href="https://github.com/chronark/swapchain/blob/master/LICENSE">
         <img 
