@@ -1,4 +1,4 @@
-name: test
+name: Tests
 on:
   push:
 
@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         node: [ '14', '12' ]
-    name: Unit test node@${{ matrix.node }}
+    name: unit test @ node ${{ matrix.node }}
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
        run: yarn install
      - run: yarn test:all
   e2e:
-    name: e2e test
+    name: e2e
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
 
   coverage:
     needs: [ test ]
-    name: Coverage
+    name: coverage report
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v2
