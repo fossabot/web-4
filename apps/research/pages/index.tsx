@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export const Index = () => {
   return (
@@ -10,9 +10,8 @@ export const Index = () => {
           to enrich your research
         </h2>
         <p className="mt-3 text-gray-500 md:text-center sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+          fugiat veniam occaecat fugiat aliqua.
         </p>
         <div className="flex flex-col items-center justify-center mt-5 space-y-8 sm:flex-row sm:space-y-0 sm:space-x-4">
           <div className="rounded-md shadow">
@@ -34,7 +33,7 @@ export const Index = () => {
         </div>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index

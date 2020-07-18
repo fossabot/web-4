@@ -1,11 +1,11 @@
 import React from "react"
 import { render } from "@testing-library/react"
 
-import Components from "./components"
+import Chart from "./chart"
 
-describe(" Components", () => {
+describe(" Chart", () => {
   it("should render successfully", () => {
-    const { baseElement } = render(<Components />)
+    const { baseElement } = render(<Chart />)
     expect(baseElement).toBeTruthy()
   })
 })

@@ -7,15 +7,10 @@ module.exports = {
   moduleFileExtensions: ["ts", "js", "html"],
   collectCoverage: true,
   coverageReporters: ["text", "lcov"],
-  collectCoverageFrom: [
-    "apps/research/**/*.{ts,tsx}",
-    "libs/components/**/*.{ts,tsx}",
-    "!**/*.d.ts",
-    "!**/index.ts",
-  ],
+  collectCoverageFrom: ["apps/research/**/*.{ts,tsx}", "libs/components/**/*.{ts,tsx}", "!**/*.d.ts", "!**/index.ts"],
   coverageThreshold: {
     global: {
       lines: 80,
     },
   },
-};
+}
