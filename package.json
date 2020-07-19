@@ -7,7 +7,6 @@
     "start": "yarn build:css && nx serve",
     "build": "NODE_ENV=production yarn build:css && nx build",
     "test": "nx run-many --target=test --all",
-    "test:all": "yarn jest",
     "fmt": "nx workspace-lint && nx lint && nx format:write",
     "e2e": "yarn build:css && nx run-many --target=e2e --all",
     "affected:apps": "nx affected:apps",
@@ -46,6 +45,7 @@
     "@nrwl/storybook": "^9.5.1",
     "@nrwl/web": "9.5.1",
     "@nrwl/workspace": "9.5.1",
+    "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/react": "5.3.9",
@@ -80,13 +80,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test && yarn build",
-      "pre-push": "yarn test:all"
+      "pre-commit": "yarn fmt && yarn affected:test && yarn affected:build",
+      "pre-push": "yarn test && yarn build"
     }
-  },
-  "lint-staged": {
-    "*": [
-      "yarn fmt"
-    ]
   }
 }

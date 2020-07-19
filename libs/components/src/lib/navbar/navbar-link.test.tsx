@@ -5,7 +5,7 @@ import NavbarLink from "./navbar-link"
 
 describe(" NavbarLink", () => {
   it("should render successfully", () => {
-    const { baseElement } = render(<NavbarLink />)
+    const { baseElement } = render(<NavbarLink label="Product" />)
     expect(baseElement).toBeTruthy()
   })
 })

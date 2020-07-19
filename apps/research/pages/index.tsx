@@ -5,9 +5,9 @@ export const Index = () => {
     <main className="max-w-screen-xl px-4 mx-auto mt-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
       <div className="flex flex-col items-center justify-center mx-auto space-y-12 sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-4xl">
         <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 md:text-center xl:text-5xl sm:leading-none md:text-6xl">
-          <span className="text-primary-600">Factor returns </span>
+          Enrich your research with
           <br className="xl:hidden"></br>
-          to enrich your research
+          <span className="text-primary-600"> Factor returns</span>
         </h2>
         <p className="mt-3 text-gray-500 md:text-center sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
