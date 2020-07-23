@@ -29,4 +29,4 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: yarn install
-      - run: yarn e2e --headless
+      - run: yarn e2e
