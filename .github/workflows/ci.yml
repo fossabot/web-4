@@ -19,7 +19,10 @@ jobs:
         run: yarn install
       - run: yarn test
   e2e:
-    name: e2e
+    strategy:
+      matrix:
+        package: ["components-e2e", "research-e2e"]
+    name: "${{ matrix.package }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,4 +32,4 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: yarn install
-      - run: yarn e2e
+      - run: yarn nx run "${{ matrix.package }}":e2e
