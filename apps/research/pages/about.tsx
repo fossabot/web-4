@@ -1,5 +1,5 @@
-import React from "react";
-import { TeamCard } from "@perfolio/components";
+import React from "react"
+import { TeamCard } from "@perfolio/components"
 
 /* eslint-disable-next-line */
 export interface AboutProps {}
@@ -48,7 +48,7 @@ export const About = (props: AboutProps) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 /* eslint-disable-next-line */
 export interface FooterLinkProps {
@@ -8,13 +8,13 @@ export interface FooterLinkProps {
 }
 
 export const FooterLink = (props: FooterLinkProps) => {
-
   const hover = `hover:text-${props.color}-600`
 
-
   return (
-    <a href={props.href} className={`block focus:outline-none ${hover}`}>{props.children}</a>
-  );
-};
+    <a href={props.href} className={`block focus:outline-none ${hover}`}>
+      {props.children}
+    </a>
+  )
+}
 
-export default FooterLink;
+export default FooterLink

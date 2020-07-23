@@ -1,12 +1,11 @@
-import React from "react";
-import {FooterLink} from "../footer-link/footer-link"
+import React from "react"
+import { FooterLink } from "../footer-link/footer-link"
 /* eslint-disable-next-line */
 export interface FooterProps {
   color?: string
 }
 
 export const Footer = (props: FooterProps) => {
-
   const color = props.color ? `bg-${props.color}-700` : "bg-gray-200"
   const darkText = "text-primary-100"
   const lightText = "text-gray-100"
@@ -17,21 +16,33 @@ export const Footer = (props: FooterProps) => {
         <div className={`flex flex-wrap justify-between p-10  ${darkText}`}>
           <div className="space-y-2">
             <h4 className={`text-xs font-semibold ${lightText} uppercase`}> Projects</h4>
-            <FooterLink color={props.color} href="https://research.perfol.io">Research</FooterLink>
-            <FooterLink color={props.color} href="/#">The other thing </FooterLink>
+            <FooterLink color={props.color} href="https://research.perfol.io">
+              Research
+            </FooterLink>
+            <FooterLink color={props.color} href="/#">
+              The other thing{" "}
+            </FooterLink>
           </div>
           <div className="space-y-2">
             <h4 className={`text-xs font-semibold ${lightText} uppercase`}> Resources</h4>
-            <FooterLink color={props.color} href="/#">Documentation</FooterLink>
-            <FooterLink color={props.color} href="/#">Tutorials</FooterLink>
+            <FooterLink color={props.color} href="/#">
+              Documentation
+            </FooterLink>
+            <FooterLink color={props.color} href="/#">
+              Tutorials
+            </FooterLink>
           </div>
           <div className="space-y-2">
             <h4 className={`text-xs font-semibold ${lightText} uppercase`}> Contact us</h4>
-            <FooterLink color={props.color} href="mailto:contact@perfol.io">contact@perfol.io</FooterLink>
+            <FooterLink color={props.color} href="mailto:contact@perfol.io">
+              contact@perfol.io
+            </FooterLink>
           </div>
           <div className="space-y-2">
             <h4 className={`text-xs font-semibold ${lightText} uppercase`}> Source</h4>
-            <FooterLink color={props.color} href="https://github.com/perfolio">github.com</FooterLink>
+            <FooterLink color={props.color} href="https://github.com/perfolio">
+              github.com
+            </FooterLink>
           </div>
         </div>
       </div>
@@ -49,7 +60,7 @@ export const Footer = (props: FooterProps) => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

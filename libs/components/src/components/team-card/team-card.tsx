@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 /* eslint-disable-next-line */
 export interface TeamCardProps {
-  name: string;
-  position: string;
-  description: string;
-  image: string;
+  name: string
+  position: string
+  description: string
+  image: string
 }
 
 export const TeamCard = (props: TeamCardProps) => {
@@ -22,7 +22,7 @@ export const TeamCard = (props: TeamCardProps) => {
         <p className="max-w-xs mt-3 sm:max-w-none">{props.description}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TeamCard;
+export default TeamCard

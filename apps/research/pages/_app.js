@@ -1,7 +1,7 @@
-import App from "next/app";
-import React from "react";
-import "../../../css/tailwind.css";
-import { Navbar, Footer } from "@perfolio/components";
+import App from "next/app"
+import React from "react"
+import "../../../css/tailwind.css"
+import { Navbar, Footer } from "@perfolio/components"
 
 class MyApp extends App {
   render() {
