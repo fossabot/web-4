@@ -1,6 +1,8 @@
-import { configure, addDecorator } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
-import "../../../css/tailwind.css";
+import { configure, addDecorator } from "@storybook/react"
+import { withKnobs } from "@storybook/addon-knobs"
+import { withA11y } from "@storybook/addon-a11y"
+import "../../../css/tailwind.css"
 
-addDecorator(withKnobs);
-configure(require.context("../src/lib", true, /\.stories\.(j|t)sx?$/), module);
+addDecorator(withKnobs)
+addDecorator(withA11y)
+configure(require.context("../src/lib", true, /\.stories\.(j|t)sx?$/), module)
