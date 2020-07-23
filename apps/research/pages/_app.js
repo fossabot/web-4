@@ -5,7 +5,7 @@ import { Navbar, Footer } from "@perfolio/components";
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps } = this.props
     return (
       <div className="relative">
         <div className="h-screen bg-gray-100">
@@ -20,4 +20,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default MyApp

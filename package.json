@@ -7,7 +7,6 @@
     "start": "yarn build:css && nx serve",
     "build": "NODE_ENV=production yarn build:css && nx build",
     "test": "nx run-many --target=test --all",
-    "test:all": "yarn jest",
     "fmt": "nx workspace-lint && nx lint && nx format:write",
     "e2e": "yarn build:css && nx run-many --target=e2e --all",
     "affected:apps": "nx affected:apps",
@@ -71,6 +70,7 @@
     "eslint-plugin-react-hooks": "4.0.8",
     "husky": "^4.2.5",
     "jest": "25.5.4",
+    "lightweight-charts": "^3.1.2",
     "lint-staged": "^10.2.11",
     "prettier": "2.0.4",
     "tailwindcss": "^1.5.1",
@@ -81,13 +81,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn test && yarn build",
-      "pre-push": "yarn test:all"
+      "pre-commit": "yarn fmt && yarn affected:test && yarn affected:build",
+      "pre-push": "yarn test && yarn build"
     }
-  },
-  "lint-staged": {
-    "*": [
-      "yarn fmt"
-    ]
   }
 }
