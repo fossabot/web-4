@@ -2,13 +2,13 @@ import React from "react"
 
 /* eslint-disable-next-line */
 export interface FooterLinkProps {
-  color: string
+  hoverColor: string
   href: string
-  children: React.ReactChildren
+  children: React.ReactNode
 }
 
 export const FooterLink = (props: FooterLinkProps) => {
-  const hover = `hover:text-${props.color}-600`
+  const hover = `hover:${props.hoverColor}`
 
   return (
     <a href={props.href} className={`block focus:outline-none ${hover}`}>

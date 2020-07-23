@@ -9,24 +9,46 @@ export default {
 
 export const primary = () => {
   const props: FooterProps = {
-    color: text("color", "primary"),
+    bgColor: text("bgColor", "bg-primary-700"),
+    primaryText: text("primaryText", "text-white"),
+    secondaryText: text("secondaryText", "text-primary-100"),
   }
-
-  return <Footer color={props.color} />
-}
-
-export const carbon = () => {
-  const props: FooterProps = {
-    color: text("color", "carbon"),
-  }
-
-  return <Footer color={props.color} />
+  return <Footer bgColor={props.bgColor} primaryText={props.primaryText} secondaryText={props.secondaryText} />
 }
 
 export const gray = () => {
   const props: FooterProps = {
-    color: text("color", "orange"),
+    bgColor: text("bgColor", "bg-gray-900"),
+    primaryText: text("primaryText", "text-white"),
+    secondaryText: text("secondaryText", "text-gray-100"),
   }
 
-  return <Footer color={props.color} />
+  return <Footer bgColor={props.bgColor} primaryText={props.primaryText} secondaryText={props.secondaryText} />
+}
+
+export const carbon = () => {
+  const props: FooterProps = {
+    bgColor: text("bgColor", "bg-carbon-900"),
+    primaryText: text("primaryText", "text-carbon-50"),
+    secondaryText: text("secondaryText", "text-carbon-100"),
+  }
+  return <Footer bgColor={props.bgColor} primaryText={props.primaryText} secondaryText={props.secondaryText} />
+}
+
+export const red = () => {
+  const props: FooterProps = {
+    bgColor: text("bgColor", "bg-red-700"),
+    primaryText: text("primaryText", "text-white"),
+    secondaryText: text("secondaryText", "text-red-100"),
+  }
+  return <Footer bgColor={props.bgColor} primaryText={props.primaryText} secondaryText={props.secondaryText} />
+}
+
+export const orange = () => {
+  const props: FooterProps = {
+    bgColor: text("bgColor", "bg-orange-500"),
+    primaryText: text("primaryText", "text-black"),
+    secondaryText: text("secondaryText", "text-gray-900"),
+  }
+  return <Footer bgColor={props.bgColor} primaryText={props.primaryText} secondaryText={props.secondaryText} />
 }

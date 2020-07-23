@@ -21,7 +21,7 @@ export const Chart = (props: ChartProps) => {
         layout: {
           backgroundColor: "#F7FAFC",
         },
-        priceScale: {
+        overlayPriceScales: {
           scaleMargins: {
             top: 0.35,
             bottom: 0.2,
