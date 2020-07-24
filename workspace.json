@@ -44,7 +44,10 @@
               "apps/research/tsconfig.json",
               "apps/research/tsconfig.test.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/research/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/research/**/*"
+            ]
           }
         },
         "test": {
@@ -79,8 +82,13 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": ["apps/research-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/research-e2e/**/*"]
+            "tsConfig": [
+              "apps/research-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/research-e2e/**/*"
+            ]
           }
         }
       }
@@ -99,7 +107,10 @@
               "libs/components/tsconfig.lib.json",
               "libs/components/tsconfig.test.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/components/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/components/**/*"
+            ]
           }
         },
         "test": {
@@ -164,8 +175,13 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": ["apps/components-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/components-e2e/**/*"]
+            "tsConfig": [
+              "apps/components-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/components-e2e/**/*"
+            ]
           }
         }
       }
