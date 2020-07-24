@@ -55,5 +55,4 @@ export const HeroSection = (props: HeroSectionProps) => {
     </main>
   )
 }
-
 export default HeroSection
