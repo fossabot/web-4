@@ -20,19 +20,18 @@
     "update": "nx migrate latest",
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
-    "build:css": "yarn tailwind build ./css/tailwind.src.css -c ./tailwind.config.js -o ./css/tailwind.css"
+    "build:css": "yarn tailwind build ./css/tailwind.src.css -c ./tailwind.config.js -o ./css/tailwind.css",
+    "lighthouse": "npx start-server-and-test 'yarn build && yarn start' http://localhost:4200 'npx lighthouse http://localhost:4200 --view'"
   },
   "private": true,
   "dependencies": {
-    "@zeit/next-css": "1.0.1",
-    "document-register-element": "1.13.1",
     "next": "9.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/preset-env": "7.9.6",
+    "@babel/core": "7.10.5",
+    "@babel/preset-env": "7.10.4",
     "@babel/preset-react": "7.9.4",
     "@babel/preset-typescript": "7.9.0",
     "@nrwl/cli": "^9.5.1",
@@ -50,7 +49,7 @@
     "@storybook/addon-viewport": "^5.3.19",
     "@storybook/react": "5.3.9",
     "@testing-library/react": "10.4.1",
-    "@types/jest": "25.1.4",
+    "@types/jest": "26.0.7",
     "@types/node": "~8.9.4",
     "@types/react": "16.9.43",
     "@types/react-dom": "16.9.8",
@@ -74,7 +73,7 @@
     "prettier": "2.0.4",
     "tailwindcss": "^1.5.1",
     "ts-jest": "25.2.1",
-    "ts-node": "~7.0.0",
+    "ts-node": "~8.10.2",
     "tslint": "~6.0.0",
     "typescript": "~3.8.3"
   },
