@@ -1,3 +1,4 @@
+export * from "./lib/code/code"
 export * from "./lib/hero-section/hero-section"
 export * from "./lib/footer-link/footer-link"
 export * from "./lib/footer/footer"

@@ -1,11 +1,11 @@
 import React from "react"
 import { render } from "@testing-library/react"
 
-import Index from "../pages/index"
+import Code from "./code"
 
-describe("Index", () => {
+describe(" Code", () => {
   it("should render successfully", () => {
-    const { baseElement } = render(<Index />)
+    const { baseElement } = render(<Code language="js" codeString="const x = 1;" />)
     expect(baseElement).toBeTruthy()
   })
 })

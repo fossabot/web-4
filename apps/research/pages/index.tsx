@@ -1,6 +1,6 @@
 import React from "react"
 import { HeroSection } from "@perfolio/components"
-export const Index = () => {
+const Index = () => {
   return (
     <HeroSection
       color="primary"

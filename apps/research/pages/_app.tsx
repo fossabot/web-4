@@ -4,7 +4,7 @@ import React from "react"
 import "../../../css/tailwind.css"
 import { Navbar, Footer } from "@perfolio/components"
 
-export default ({ Component, pageProps }: AppProps) => {
+const app = ({ Component, pageProps }: AppProps) => {
   const logo = (
     <div className="text-xl font-semibold">
       <span className="text-gray-800">PERFOLIO</span>
@@ -27,3 +27,4 @@ export default ({ Component, pageProps }: AppProps) => {
     </div>
   )
 }
+export default app
