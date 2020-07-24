@@ -8,6 +8,4 @@ describe("Index", () => {
     const { baseElement } = render(<Index />)
     expect(baseElement).toBeTruthy()
   })
-
-  
 })

@@ -14,11 +14,11 @@ export const Footer = (props: FooterProps) => {
         <div className={`flex flex-wrap justify-between p-10  ${props.secondaryText}`}>
           <div className="space-y-2">
             <h4 className={`text-xs font-semibold ${props.primaryText} uppercase`}> Projects</h4>
+            <FooterLink hoverColor={props.primaryText} href="https://perfol.io">
+              Core
+            </FooterLink>
             <FooterLink hoverColor={props.primaryText} href="https://research.perfol.io">
               Research
-            </FooterLink>
-            <FooterLink hoverColor={props.primaryText} href="/#">
-              The other thing{" "}
             </FooterLink>
           </div>
           <div className="space-y-2">

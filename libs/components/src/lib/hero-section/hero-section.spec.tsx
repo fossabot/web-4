@@ -1,8 +1,11 @@
 import React from "react"
-import { HeroSection } from "@perfolio/components"
-export const Index = () => {
-  return (
-    <HeroSection
+import { render } from "@testing-library/react"
+
+import HeroSection from "./hero-section"
+
+describe(" HeroSection", () => {
+  it("should render successfully", () => {
+    const { baseElement } = render(<HeroSection
       color="primary"
       headline={{
         regular: "Enhance your research with",
@@ -17,8 +20,7 @@ export const Index = () => {
         label: "Learn more",
         href: "#",
       }}
-    />
-  )
-}
-
-export default Index
+    />)
+    expect(baseElement).toBeTruthy()
+  })
+})
