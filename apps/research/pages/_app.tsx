@@ -15,7 +15,7 @@ const app = ({ Component, pageProps }: AppProps) => {
   return (
     <div>
       <Head>
-        <title>Perfolio Core</title>
+        <title>Perfolio Research</title>
       </Head>
       <div className="h-screen bg-gray-100">
         <div className="container mx-auto">

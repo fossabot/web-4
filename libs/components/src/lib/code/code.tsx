@@ -1,6 +1,6 @@
 import React from "react"
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"
-import prism from "react-syntax-highlighter/dist/cjs/styles/prism/ghcolors"
+import style from "./style"
 
 /* eslint-disable-next-line */
 export interface CodeProps {
@@ -10,9 +10,11 @@ export interface CodeProps {
 
 export const Code = (props: CodeProps) => {
   return (
-    <SyntaxHighlighter language={props.language} style={prism} customStyle={"color:red;"}>
-      {props.children}
-    </SyntaxHighlighter>
+    <div className="px-4 m-8 overflow-visible bg-gray-900 rounded-lg shadow-lg ">
+      <SyntaxHighlighter language={props.language} style={style} className="font-mono">
+        {props.children}
+      </SyntaxHighlighter>
+    </div>
   )
 }
 
