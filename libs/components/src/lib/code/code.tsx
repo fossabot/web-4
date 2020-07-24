@@ -4,14 +4,14 @@ import prism from "react-syntax-highlighter/dist/cjs/styles/prism/ghcolors"
 
 /* eslint-disable-next-line */
 export interface CodeProps {
-  codeString: string
   language: string
+  children: string
 }
 
 export const Code = (props: CodeProps) => {
   return (
-    <SyntaxHighlighter language={props.language} style={prism}>
-      {props.codeString}
+    <SyntaxHighlighter language={props.language} style={prism} customStyle={"color:red;"}>
+      {props.children}
     </SyntaxHighlighter>
   )
 }
