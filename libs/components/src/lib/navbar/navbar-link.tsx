@@ -1,9 +1,9 @@
-import React from "react";
-import Link from "next/link";
+import React from "react"
+import Link from "next/link"
 /* eslint-disable-next-line */
 export interface NavbarLinkProps {
-  label: string;
-  href?: string;
+  label: string
+  href?: string
 }
 
 export const NavbarLink = (props: NavbarLinkProps) => {
@@ -13,7 +13,7 @@ export const NavbarLink = (props: NavbarLinkProps) => {
         {props.label}
       </a>
     </Link>
-  );
-};
+  )
+}
 
-export default NavbarLink;
+export default NavbarLink
