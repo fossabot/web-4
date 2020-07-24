@@ -40,10 +40,7 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": [
-              "apps/research/tsconfig.json",
-              "apps/research/tsconfig.test.json"
-            ],
+            "tsConfig": ["apps/research/tsconfig.json", "apps/research/tsconfig.test.json"],
             "exclude": ["**/node_modules/**", "!apps/research/**/*"]
           }
         },
@@ -95,10 +92,7 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": [
-              "libs/components/tsconfig.lib.json",
-              "libs/components/tsconfig.test.json"
-            ],
+            "tsConfig": ["libs/components/tsconfig.lib.json", "libs/components/tsconfig.test.json"],
             "exclude": ["**/node_modules/**", "!libs/components/**/*"]
           }
         },
