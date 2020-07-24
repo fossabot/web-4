@@ -1,6 +1,6 @@
 import React from "react"
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"
-import prism from "react-syntax-highlighter/dist/esm/styles/prism/ghcolors"
+import prism from "react-syntax-highlighter/dist/cjs/styles/prism/ghcolors"
 
 /* eslint-disable-next-line */
 export interface CodeProps {
