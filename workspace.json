@@ -163,6 +163,87 @@
           }
         }
       }
+    },
+    "perfolio": {
+      "root": "apps/perfolio",
+      "sourceRoot": "apps/perfolio",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/next:build",
+          "options": {
+            "root": "apps/perfolio",
+            "outputPath": "dist/apps/perfolio"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "perfolio:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "perfolio:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "builder": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "perfolio:build:production"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": ["apps/perfolio/tsconfig.json", "apps/perfolio/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!apps/perfolio/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/perfolio/jest.config.js",
+            "tsConfig": "apps/perfolio/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "perfolio-e2e": {
+      "root": "apps/perfolio-e2e",
+      "sourceRoot": "apps/perfolio-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/perfolio-e2e/cypress.json",
+            "tsConfig": "apps/perfolio-e2e/tsconfig.e2e.json",
+            "devServerTarget": "perfolio:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "perfolio:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": ["apps/perfolio-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/perfolio-e2e/**/*"]
+          }
+        }
+      }
     }
   },
   "cli": {
