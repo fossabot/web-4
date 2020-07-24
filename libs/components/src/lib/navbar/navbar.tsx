@@ -2,7 +2,9 @@ import React, { useState } from "react"
 import { NavbarLink } from "./navbar-link"
 import Link from "next/link"
 /* eslint-disable-next-line */
-export interface NavbarProps {}
+export interface NavbarProps {
+  logo: React.ReactNode
+}
 
 export const Navbar = (props: NavbarProps) => {
   const [open, setOpen] = useState(false)
@@ -14,10 +16,7 @@ export const Navbar = (props: NavbarProps) => {
     <nav role="navigation" className="p-8">
       <div className="container flex flex-wrap items-center justify-between mx-auto md:flex-no-wrap">
         <Link href="/">
-          <a className="text-xl font-semibold">
-            <span className="text-gray-800">PERFOLIO</span>
-            <span className="text-primary-500">RESEARCH</span>
-          </a>
+          <a>{props.logo}</a>
         </Link>
 
         <div className="md:hidden">
