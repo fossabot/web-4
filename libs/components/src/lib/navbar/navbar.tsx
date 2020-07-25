@@ -19,7 +19,6 @@ export const Navbar = (props: NavbarProps) => {
   }
   return (
     <nav
-      layout
       role="navigation"
       className="container flex flex-wrap items-center justify-between p-4 mx-auto md:flex-no-wrap"
     >
