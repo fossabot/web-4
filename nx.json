@@ -1,5 +1,5 @@
 {
-  "npmScope": "perfolio",
+  "npmScope": "core",
   "affected": {
     "defaultBase": "master"
   },
@@ -38,6 +38,13 @@
     "components-e2e": {
       "tags": [],
       "implicitDependencies": ["components"]
+    },
+    "core": {
+      "tags": []
+    },
+    "core-e2e": {
+      "tags": [],
+      "implicitDependencies": ["core"]
     }
   }
 }

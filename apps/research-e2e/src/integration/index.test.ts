@@ -2,6 +2,7 @@ describe("research", () => {
   beforeEach(() => cy.visit("/"))
 
   it("should display header message", () => {
-    cy.contains("Enrich your research with Factor returns")
+    cy.contains("Enhance your research with")
+    cy.contains("factor returns")
   })
 })

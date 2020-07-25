@@ -1,0 +1,17 @@
+import requests
+
+url = "https://api-beta.tgr22.net/v1"
+params = { 
+"token": "zjGC6iUbbDXj9zoJqz7f", 
+"region": "Japan", 
+"model": "6", 
+"freq": "d", 
+"currency": "CNY", 
+"from": "2005-12-31", 
+"to": "2020-02-28", 
+"dropna": "0"
+}
+
+r = requests.get(url, params=params)
+
+print(r.text)
