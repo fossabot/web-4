@@ -27,6 +27,7 @@
   "dependencies": {
     "@zeit/next-css": "1.0.1",
     "document-register-element": "1.13.1",
+    "framer-motion": "^2.1.4",
     "next": "9.3.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
@@ -82,8 +83,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn fmt && yarn affected:test && yarn affected:build",
-      "pre-push": "yarn test && yarn build"
+      "pre-commit": "yarn fmt && yarn test && yarn affected:build",
+      "pre-push": "yarn build && yarn e2e"
     }
   }
 }
