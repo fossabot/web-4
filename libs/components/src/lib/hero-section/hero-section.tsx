@@ -16,6 +16,7 @@ export interface HeroSectionProps {
     label: string
     href: string
   }
+  children?: React.ReactNode
 }
 
 export const HeroSection = (props: HeroSectionProps) => {
@@ -32,7 +33,7 @@ export const HeroSection = (props: HeroSectionProps) => {
   }
 
   return (
-    <main className="flex items-center px-4 mt-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+    <main className="flex flex-col items-center px-4 mt-10 space-y-8 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 xl:flex-row xl:space-y-0 xl:space-x-8">
       <div className="flex flex-col items-center w-full">
         <div className="space-y-4 text-left sm:text-center md:space-y-8 xl:space-y-12 lg:text-left">
           <h2 className="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 xl:text-5xl sm:leading-none md:text-5xl">
@@ -61,7 +62,7 @@ export const HeroSection = (props: HeroSectionProps) => {
                   href={props.secondaryButton.label}
                   className={`flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 ${toText(
                     700,
-                  )} transition duration-150 ease-in-out${toBg(
+                  )} transition duration-150 ease-in-out ${toBg(
                     100,
                   )} border border-transparent rounded-md hover:${toText(600)} hover:${toBg(
                     100,
@@ -74,31 +75,7 @@ export const HeroSection = (props: HeroSectionProps) => {
           </div>
         </div>
       </div>
-      <Code language="r">
-        {`
-library(jsonlite)
-library(httr)
-
-call_api <- function (query) {
-  url <- modify_url("https://api-beta.tgr22.net/v1", query = query)
-  GET(url)
-}
-resp <- call_api(
-  list(
-    token = "zjGC6iUbbDXj9zoJqz7f", 
-    region = "Japan", 
-    model = "6", 
-    freq = "d", 
-    currency = "CNY", 
-    from = "2005-12-31", 
-    to = "2020-02-28", 
-    dropna = "0"
-  )
-)
-cont <- fromJSON(content(resp, as = "text", encoding = "UTF-8"))
-test <- data.frame(cont)
-`.toString()}
-      </Code>
+      {props.children}
     </main>
   )
 }

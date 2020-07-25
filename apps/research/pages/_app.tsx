@@ -17,7 +17,7 @@ const app = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Perfolio Research</title>
       </Head>
-      <div className="h-screen bg-gray-100">
+      <div className="bg-gray-100">
         <div className="container mx-auto">
           <Navbar logo={logo}></Navbar>
           <Component {...pageProps} />
