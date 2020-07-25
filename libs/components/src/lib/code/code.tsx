@@ -18,10 +18,11 @@ export const Code = (props: CodeProps) => {
         {props.code.map((c) => {
           return (
             <button
+              key={c.language}
               onClick={() => setSelectedlanguage(c.language)}
               className={`py-3 mr-8 text-xs font-bold tracking-wide  no-underline uppercase focus:outline-none hover:text-gray-900 ${
                 c.language === selectedLanguage ? "text-primary-900" : "text-gray-600"
-              }`}
+                }`}
             >
               {c.language}
             </button>
