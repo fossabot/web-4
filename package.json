@@ -83,8 +83,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn fmt && yarn test && yarn affected:build",
-      "pre-push": "yarn build && yarn e2e"
+      "pre-commit": "lint-staged && yarn affected:test && yarn affected:build",
+      "pre-push": "yarn build && yarn test && yarn e2e"
     }
+  },
+  "lint-staged": {
+    "{ts,tsx,js,json,md,css,html}": [
+      "yarn affected:lint --uncommitted --parallel --fix=true",
+      "yarn nx format:write --uncommitted"
+    ]
   }
 }
