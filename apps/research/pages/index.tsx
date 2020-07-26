@@ -11,7 +11,7 @@ interface IndexProps {
 
 const Index = (props: IndexProps) => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <div className="flex flex-col items-start px-4 mt-10 space-y-8 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 xl:flex-row xl:space-y-0 xl:space-x-8">
         <HeroSection
           color="primary"
