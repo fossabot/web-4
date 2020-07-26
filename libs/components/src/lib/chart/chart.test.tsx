@@ -4,11 +4,11 @@ import { render } from "@testing-library/react"
 import "../../../../../__mocks__/matchMedia"
 import Chart from "./chart"
 
-describe(" Chart", () => {
+describe("Chart", () => {
   it("should render successfully", () => {
     const data = []
 
-    const { baseElement } = render(<Chart data={data}></Chart>)
+    const { baseElement } = render(<Chart data={data} />)
     expect(baseElement).toBeTruthy()
   })
 })

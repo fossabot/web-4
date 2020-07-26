@@ -1,4 +1,5 @@
 import React, { createRef, useEffect, useState } from "react"
+import { create } from "domain"
 export interface ChartProps {
   data: { time: string; value: number }[]
   className?: string
