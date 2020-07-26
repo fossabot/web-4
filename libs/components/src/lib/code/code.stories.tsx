@@ -9,10 +9,12 @@ export default {
 export const singleLine = () => {
   /* eslint-disable-next-line */
   const props: CodeProps = {
-    code: [{
-      snippet: `const x = ["hello", "world"].map(word => word + "!")`,
-      language: "js",
-    }]
+    code: [
+      {
+        snippet: `const x = ["hello", "world"].map(word => word + "!")`,
+        language: "js",
+      },
+    ],
   }
   return <Code code={props.code} />
 }
@@ -27,8 +29,8 @@ export const multiLine = () => {
         const x = arr.map(word => word + "!")
         `,
         language: "js",
-      }
-    ]
+      },
+    ],
   }
   return <Code code={props.code} />
 }
