@@ -62,7 +62,7 @@ exports[` Footer renders correctly 1`] = `
         </h4>
         <a
           className="block focus:outline-none hover:text-white"
-          href="mailto:contact@perfol.io"
+          href="mailto:info@perfol.io"
         >
           contact@perfol.io
         </a>
