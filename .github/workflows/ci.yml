@@ -34,7 +34,7 @@ jobs:
   e2e:
     strategy:
       matrix:
-        package: ["components-e2e", "research-e2e"]
+        package: ["core-e2e", "research-e2e"]
     name: "${{ matrix.package }}"
     runs-on: ubuntu-latest
     steps:
