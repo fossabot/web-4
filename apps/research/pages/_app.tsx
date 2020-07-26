@@ -16,6 +16,7 @@ const app = ({ Component, pageProps }: AppProps) => {
     <div>
       <Head>
         <title>Perfolio Research</title>
+        <meta content="Factor returns api" />
       </Head>
       <div className="bg-gray-100">
         <div className="container mx-auto">
