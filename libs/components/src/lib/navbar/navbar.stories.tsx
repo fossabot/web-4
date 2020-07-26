@@ -8,8 +8,8 @@ export default {
 
 export const primary = () => {
   const props: NavbarProps = {
-    logo: <p>Logo</p>
+    logo: <p>Logo</p>,
   }
 
-  return <Navbar logo={props.logo}/>
+  return <Navbar logo={props.logo} />
 }
