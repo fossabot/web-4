@@ -32,7 +32,7 @@ export const Footer = (props: FooterProps) => {
           </div>
           <div className="space-y-2">
             <h4 className={`text-xs font-semibold ${props.primaryText} uppercase`}> Contact us</h4>
-            <FooterLink hoverColor={props.primaryText} href="mailto:contact@perfol.io">
+            <FooterLink hoverColor={props.primaryText} href="mailto:info@perfol.io">
               contact@perfol.io
             </FooterLink>
           </div>

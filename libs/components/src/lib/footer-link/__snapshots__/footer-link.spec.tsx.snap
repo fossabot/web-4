@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` FooterLink renders correctly 1`] = `
+<a
+  className="block focus:outline-none hover:text-white"
+  href="#"
+>
+  Something
+</a>
+`;

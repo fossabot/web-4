@@ -7,8 +7,9 @@ export default {
 }
 
 export const primary = () => {
-  /* eslint-disable-next-line */
-  const props: NavbarProps = {}
+  const props: NavbarProps = {
+    logo: <p>Logo</p>
+  }
 
-  return <Navbar />
+  return <Navbar logo={props.logo}/>
 }

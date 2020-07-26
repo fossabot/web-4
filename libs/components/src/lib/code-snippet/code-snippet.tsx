@@ -2,12 +2,12 @@ import React from "react"
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter"
 import style from "../code-snippet/style"
 /* eslint-disable-next-line */
-export interface CodeProps {
+export interface CodeSnippetProps {
   language: string
   children: string
 }
 
-export const CodeSnippet = (props: CodeProps) => {
+export const CodeSnippet = (props: CodeSnippetProps) => {
   return (
     <SyntaxHighlighter language={props.language} style={style} className="font-mono">
       {props.children}

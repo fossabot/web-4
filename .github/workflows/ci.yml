@@ -34,7 +34,7 @@ jobs:
   e2e:
     strategy:
       matrix:
-        package: ["components-e2e", "research-e2e"]
+        package: ["core-e2e", "research-e2e"]
     name: "${{ matrix.package }}"
     runs-on: ubuntu-latest
     steps:
@@ -49,3 +49,13 @@ jobs:
         run: yarn build:css
       - name: Run Integration test
         run: yarn nx run "${{ matrix.package }}":e2e
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: yarn install
+      - run: NODE_ENV=production yarn build:css && yarn nx export research
+      - run: npm install -g @lhci/cli@0.4.x && lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
