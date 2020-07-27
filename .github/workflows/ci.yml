@@ -68,7 +68,7 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
-            - name: install
+      - name: install
         run: yarn install && npm install -g @lhci/cli
       - name: build
         run: yarn build
