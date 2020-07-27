@@ -40,6 +40,9 @@ jobs:
         run: yarn install
       - run: yarn test
   e2e:
+    strategy:
+      matrix:
+        package: ["core-e2e", "research-e2e"]
     name: "${{ matrix.package }}"
     runs-on: ubuntu-latest
     steps:
@@ -57,7 +60,7 @@ jobs:
       - name: Build css
         run: yarn build:css
       - name: Run Integration test
-        run: yarn nx run-many --target=e2e --all
+        run: yarn nx run "${{ matrix.package }}":e2e
   lighthouse:
     runs-on: ubuntu-latest
     steps:
