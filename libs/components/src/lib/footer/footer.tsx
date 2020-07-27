@@ -13,7 +13,7 @@ export const Footer = (props: FooterProps) => {
       <div className="max-w-6xl mx-auto">
         <div className={`flex flex-wrap justify-between p-10  ${props.secondaryText}`}>
           <div className="space-y-2">
-            <h4 className={`text-xs font-semibold ${props.primaryText} uppercase`}> Projects</h4>
+            <span className={`text-xs font-semibold ${props.primaryText} uppercase`}> Projects</span>
             <FooterLink hoverColor={props.primaryText} href="https://perfol.io">
               Core
             </FooterLink>
@@ -22,7 +22,7 @@ export const Footer = (props: FooterProps) => {
             </FooterLink>
           </div>
           <div className="space-y-2">
-            <h4 className={`text-xs font-semibold ${props.primaryText} uppercase`}> Resources</h4>
+            <span className={`text-xs font-semibold ${props.primaryText} uppercase`}> Resources</span>
             <FooterLink hoverColor={props.primaryText} href="/#">
               Documentation
             </FooterLink>
@@ -31,13 +31,13 @@ export const Footer = (props: FooterProps) => {
             </FooterLink>
           </div>
           <div className="space-y-2">
-            <h4 className={`text-xs font-semibold ${props.primaryText} uppercase`}> Contact us</h4>
+            <span className={`text-xs font-semibold ${props.primaryText} uppercase`}> Contact us</span>
             <FooterLink hoverColor={props.primaryText} href="mailto:info@perfol.io">
               contact@perfol.io
             </FooterLink>
           </div>
           <div className="space-y-2">
-            <h4 className={`text-xs font-semibold ${props.primaryText} uppercase`}> Source</h4>
+            <span className={`text-xs font-semibold ${props.primaryText} uppercase`}> Source</span>
             <FooterLink hoverColor={props.primaryText} href="https://github.com/perfolio">
               github.com
             </FooterLink>

@@ -13,11 +13,11 @@ exports[` Footer renders correctly 1`] = `
       <div
         className="space-y-2"
       >
-        <h4
+        <span
           className="text-xs font-semibold text-white uppercase"
         >
            Projects
-        </h4>
+        </span>
         <a
           className="block focus:outline-none hover:text-white"
           href="https://perfol.io"
@@ -34,11 +34,11 @@ exports[` Footer renders correctly 1`] = `
       <div
         className="space-y-2"
       >
-        <h4
+        <span
           className="text-xs font-semibold text-white uppercase"
         >
            Resources
-        </h4>
+        </span>
         <a
           className="block focus:outline-none hover:text-white"
           href="/#"
@@ -55,11 +55,11 @@ exports[` Footer renders correctly 1`] = `
       <div
         className="space-y-2"
       >
-        <h4
+        <span
           className="text-xs font-semibold text-white uppercase"
         >
            Contact us
-        </h4>
+        </span>
         <a
           className="block focus:outline-none hover:text-white"
           href="mailto:info@perfol.io"
@@ -70,11 +70,11 @@ exports[` Footer renders correctly 1`] = `
       <div
         className="space-y-2"
       >
-        <h4
+        <span
           className="text-xs font-semibold text-white uppercase"
         >
            Source
-        </h4>
+        </span>
         <a
           className="block focus:outline-none hover:text-white"
           href="https://github.com/perfolio"

@@ -12,10 +12,10 @@ const app = ({ Component, pageProps }: AppProps) => {
   )
 
   return (
-    <div>
+    <html lang="en">
       <Head>
         <title>Perfolio Core</title>
-        <meta content="Perfolio core" />
+        <meta name="description" content="Content goes here" />
       </Head>
       <div className="h-screen bg-gray-100">
         <div className="container mx-auto">
@@ -24,7 +24,7 @@ const app = ({ Component, pageProps }: AppProps) => {
         </div>
       </div>
       <Footer bgColor="bg-red-700" primaryText="text-white" secondaryText="text-red-100"></Footer>
-    </div>
+    </html>
   )
 }
 export default app
