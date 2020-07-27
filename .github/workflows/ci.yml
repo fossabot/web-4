@@ -62,10 +62,6 @@ jobs:
       - name: Run Integration test
         run: yarn nx run "${{ matrix.package }}":e2e
   lighthouse:
-    strategy:
-      max-parallel: 1
-      matrix:
-        app: ["research", "core"]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -80,8 +76,10 @@ jobs:
       - name: build
         run: yarn build
       - name: export
-        run: yarn nx run ${{matrix.package}}:export
+        run: yarn nx run-many --target=export --all
       - name: run lighthouse
-        run: lhci --config=${{github.workspace}}/lighthouse/${{matrix.app}}.js autorun
+        run: |
+          lhci --config=${{github.workspace}}/lighthouse/core.js autorun
+          lhci --config=${{github.workspace}}/lighthouse/research.js autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
