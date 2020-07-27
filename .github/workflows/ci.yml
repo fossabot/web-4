@@ -61,7 +61,9 @@ jobs:
         run: yarn install
       - name: build
         run: yarn build
+      - name: Install lighthouse
+        run: npm install -g @lhci/cli
       - name: run lighthouse
-        run: npm install -g @lhci/cli@0.4.x && lhci --config=./lighthouse/${{matrix.app}}.js autorun
+        run: lhci --config=./lighthouse/${{matrix.app}}.js autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
