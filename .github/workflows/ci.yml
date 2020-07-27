@@ -71,7 +71,7 @@ jobs:
       - name: install
         run: yarn install && npm install -g @lhci/cli
       - name: build
-        run: yarn build
+        run: yarn build && yarn nx run research:export
       - name: run lighthouse
         run: lhci --config=${{github.workspace}}/lighthouse/${{matrix.app}}.js autorun
         env:
