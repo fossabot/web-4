@@ -5,7 +5,7 @@ module.exports = {
     // },
     collect: {
       url: ["http://localhost:4200/"],
-      startServerCommand: "yarn nx run research:serve",
+      startServerCommand: "NODE_ENV=production yarn nx run research:serve --skip-nx-cache",
     },
     upload: {
       target: "temporary-public-storage",
