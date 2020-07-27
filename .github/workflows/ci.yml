@@ -50,6 +50,9 @@ jobs:
       - name: Run Integration test
         run: yarn nx run "${{ matrix.package }}":e2e
   lighthouse:
+    strategy:
+      matrix:
+        app: ["research", "core"]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -61,6 +64,6 @@ jobs:
       - name: export
         run: yarn nx export research
       - name: run lighthouse
-        run: npm install -g @lhci/cli@0.4.x && lhci autorun
+        run: npm install -g @lhci/cli@0.4.x && lhci --config=./lighthouse/${{matrix.app}}.js autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
