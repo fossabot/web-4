@@ -13,10 +13,11 @@ const app = ({ Component, pageProps }: AppProps) => {
   )
 
   return (
-    <div>
+    <html lang="en">
       <Head>
         <title>Perfolio Research</title>
-        <meta content="Factor returns api" />
+        <meta lang="en"></meta>
+        <meta name="description" content="goes here" />
       </Head>
       <div className="bg-gray-100">
         <div className="container mx-auto">
@@ -25,7 +26,7 @@ const app = ({ Component, pageProps }: AppProps) => {
         </div>
       </div>
       <Footer bgColor="bg-primary-700" primaryText="text-white" secondaryText="text-primary-100"></Footer>
-    </div>
+    </html>
   )
 }
 export default app
