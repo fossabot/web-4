@@ -25,7 +25,7 @@ const Index = (props: IndexProps) => {
             href: "#",
           }}
           secondaryButton={{
-            label: "Learn more",
+            label: "Log in",
             href: "#",
           }}
         ></HeroSection>
